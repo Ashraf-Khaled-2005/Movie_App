@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:movie_app/features/auth/presentation/view/login_view.dart';
 import 'package:movie_app/features/splash/presentation/views/onboarding_view.dart';
 import 'package:movie_app/features/splash/presentation/views/splash_view.dart';
 
@@ -13,12 +14,18 @@ final router = GoRouter(
       builder: (context, state) =>
           const OnboardingView(), // Replace with your actual home view
     ),
+    GoRoute(
+      path: AppRoute.login.path,
+      builder: (context, state) =>
+          const LoginView(), // Replace with your actual home view
+    ),
     // Add other routes as needed
   ],
 );
 
 enum AppRoute {
   splash('/'),
+  login('/login'),
   onboarding('/onboarding'),
   home('/home');
 

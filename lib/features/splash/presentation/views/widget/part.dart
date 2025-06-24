@@ -4,6 +4,7 @@ import 'package:movie_app/core/widget/boarded_buttom.dart';
 import 'package:movie_app/core/widget/botton.dart';
 
 class Custom_part_onBoarding extends StatelessWidget {
+  final void Function()? onPressed1, onPressed2;
   final String b_text1, b_text2;
   final String ftext, stext;
   const Custom_part_onBoarding({
@@ -13,6 +14,8 @@ class Custom_part_onBoarding extends StatelessWidget {
     this.stext = '',
     required this.b_text1,
     this.b_text2 = '',
+    this.onPressed1,
+    this.onPressed2,
   });
 
   final bool ishad;
@@ -47,20 +50,10 @@ class Custom_part_onBoarding extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            CustomButtom(
-              text: "Explore Now",
-              onPressed: () {
-                // Navigate to the next screen or perform an action
-              },
-            ),
+            CustomButtom(text: b_text1, onPressed: onPressed1),
             SizedBox(height: 20),
             ishad
-                ? CustomBoardedButtom(
-                    text: "Explore Now",
-                    onPressed: () {
-                      // Navigate to the next screen or perform an action
-                    },
-                  )
+                ? CustomBoardedButtom(text: b_text2, onPressed: onPressed2)
                 : SizedBox(width: 0.0, height: 0.0),
           ],
         ),

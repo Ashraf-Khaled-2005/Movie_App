@@ -26,16 +26,15 @@ class GmailStyleTextField extends StatelessWidget {
       style: AppTextStyles.regular16.copyWith(
         color: Colors.white,
       ), // Text color
-
       decoration: InputDecoration(
         fillColor: Color(0xff282A28),
         filled: true,
-        labelStyle: AppTextStyles.regular16.copyWith(color: Colors.white),
-        prefix: Padding(
+        hintStyle: AppTextStyles.regular16.copyWith(color: Colors.white),
+        prefixIcon: Padding(
           padding: const EdgeInsets.only(right: 16.0),
-          child: Image.asset(icon, width: 20, height: 15),
+          child: Image.asset(icon, width: 15, height: 15, color: Colors.white),
         ),
-        labelText: labelText,
+        hintText: labelText,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 19,

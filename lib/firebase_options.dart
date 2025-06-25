@@ -64,7 +64,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '400305329010',
     projectId: 'movie-app-3f1b7',
     storageBucket: 'movie-app-3f1b7.firebasestorage.app',
-    iosClientId: '400305329010-6mmaghdt2n4dv3ugnbq0l8o75dpgqkgt.apps.googleusercontent.com',
+    iosClientId:
+        '400305329010-6mmaghdt2n4dv3ugnbq0l8o75dpgqkgt.apps.googleusercontent.com',
     iosBundleId: 'com.example.movieApp',
   );
 
@@ -74,7 +75,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '400305329010',
     projectId: 'movie-app-3f1b7',
     storageBucket: 'movie-app-3f1b7.firebasestorage.app',
-    iosClientId: '400305329010-6mmaghdt2n4dv3ugnbq0l8o75dpgqkgt.apps.googleusercontent.com',
+    iosClientId:
+        '400305329010-6mmaghdt2n4dv3ugnbq0l8o75dpgqkgt.apps.googleusercontent.com',
     iosBundleId: 'com.example.movieApp',
   );
 

@@ -44,6 +44,11 @@ class Assets {
   /// assets/images/Group 21.png
   static const String assetsImagesGroup21 = "assets/images/Group 21.png";
 
+  /// Assets for assetsImagesIcon Google
+  /// assets/images/icon _google_.jpg
+  static const String assetsImagesIconGoogle =
+      "assets/images/icon _google_.jpg";
+
   /// Assets for assetsImagesIcon Identification
   /// assets/images/icon _Identification_.png
   static const String assetsImagesIconIdentification =

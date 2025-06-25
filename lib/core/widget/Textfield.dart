@@ -5,24 +5,23 @@ import 'package:movie_app/core/utils/assets.dart';
 class GmailStyleTextField extends StatelessWidget {
   final String labelText;
   final bool obscureText;
-  final TextEditingController? controller;
-  final ValueChanged<String>? onChanged;
+  final String icon;
+  final void Function(String?)? onsaved;
   final TextInputType? keyboardType;
-  final String? errorText;
 
   const GmailStyleTextField({
     super.key,
     required this.labelText,
     this.obscureText = false,
-    this.controller,
-    this.onChanged,
+    this.onsaved,
     this.keyboardType,
-    this.errorText,
+    required this.icon,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: onsaved,
       obscureText: obscureText,
       style: AppTextStyles.regular16.copyWith(
         color: Colors.white,
@@ -34,10 +33,9 @@ class GmailStyleTextField extends StatelessWidget {
         labelStyle: AppTextStyles.regular16.copyWith(color: Colors.white),
         prefix: Padding(
           padding: const EdgeInsets.only(right: 16.0),
-          child: Image.asset(Assets.assetsImagesVector1, width: 20, height: 15),
+          child: Image.asset(icon, width: 20, height: 15),
         ),
         labelText: labelText,
-        errorText: errorText,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 19,
